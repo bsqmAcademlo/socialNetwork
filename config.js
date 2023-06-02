@@ -1,18 +1,23 @@
 require("dotenv").config();
 
+console.log(`\n${process.env.JWT_SECRETE}\n`);
+console.log(`\n${process.env.HOST}\n`);
+console.log(`\n${process.env.NODE_ENV}\n`);
+console.log(`\n${process.env.JWT_SECRETE}\n`);
+
 const config = {
-    PORT: process.env.PORT || 3002,
-    HOST: process.env.HOST || "http://localhost:3002",
-    NODE_ENV: process.env.NODE_ENV || "dev",
+    PORT: process.env.PORT,
+    HOST: process.env.HOST,
+    NODE_ENV: process.env.NODE_ENV,
     jwtSecret: process.env.JWT_SECRETE,
     DB: {
         dev: {
-            dialect: process.env.DB_DIALECT || "postgres",
-            host: process.env.DB_HOST || "localhost",
-            port: process.env.DB_PORT || 5432,
-            username: process.env.DB_USERNAME || "postgres",
-            password: process.env.DB_PASSWORD || "root",
-            database: process.env.DB_DATABASE || "redsocial",
+            dialect: process.env.DB_DIALECT,
+            host: process.env.DB_HOST,
+            port: process.env.DB_PORT,
+            username: process.env.DB_USERNAME,
+            password: process.env.DB_PASSWORD,
+            database: process.env.DB_DATABASE,
             //Extra configs
             define: {
                 timestamps: true,
@@ -20,7 +25,7 @@ const config = {
             },
         },
         prod: {
-            dialect: process.env.DB_DIALECT || "postgres",
+            dialect: process.env.DB_DIALECT,
             host: process.env.DB_HOST,
             port: process.env.DB_PORT,
             username: process.env.DB_USERNAME,
