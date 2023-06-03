@@ -1,10 +1,5 @@
 require("dotenv").config();
 
-console.log(`\n${process.env.JWT_SECRETE}\n`);
-console.log(`\n${process.env.HOST}\n`);
-console.log(`\n${process.env.NODE_ENV}\n`);
-console.log(`\n${process.env.JWT_SECRETE}\n`);
-
 const config = {
     PORT: process.env.PORT,
     HOST: process.env.HOST,
